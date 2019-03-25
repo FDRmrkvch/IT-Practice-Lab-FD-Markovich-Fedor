@@ -12,6 +12,7 @@ function FindLongestString(sen) {
         });
 console.log(word);
 }
-    
+
+console.log("TASK #1");
 FindLongestString("My favorite juice is grapefruit");
 FindLongestString("They often help us");
