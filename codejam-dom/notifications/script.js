@@ -3,12 +3,12 @@ window.onload = function () {
         let notifications = new Notifications;
         notifications.switches[1].click();
         setTimeout(function () {
-            let block = document.querySelector(".blockNotifications");
+            let block = document.querySelector(".notificationBox");
             block.style.display = "block";
         }, 1000)
     }
     else {
-        let notifications = document.querySelector(".blockNotifications");
+        let notifications = document.querySelector(".notificationBox");
         notifications.style.display = "none";
     }
 }
@@ -25,10 +25,10 @@ class Notifications {
         this.start();
     }
     start() {
-        this.closeButton = document.getElementById("closeNotifications");
+        this.closeButton = document.getElementById("closeButton");
         let switchesBlock = document.querySelector(".switches");
         this.switches = switchesBlock.getElementsByTagName("button");
-        this.text = document.querySelector(".inf");
+        this.text = document.querySelector(".focus");
         this.input = document.getElementById("input");
         this.addEvent();
     }
@@ -37,7 +37,7 @@ class Notifications {
 
         let that = this;
         this.closeButton.addEventListener("click", function () {
-            let block = document.querySelector(".blockNotifications");
+            let block = document.querySelector(".notificationBox");
             block.style.display = "none";
             if (that.input.checked) {
                 localStorage.setItem("noLoading", "true");
@@ -71,7 +71,7 @@ class Notifications {
             if (e.keyCode == 39) {
                 that.switches[7].click();
             }
-            if (e.keyCode == 27) {
+            if (e.keyCode == 67) {
                 that.closeButton.click();
             }
         }

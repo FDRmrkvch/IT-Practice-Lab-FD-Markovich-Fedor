@@ -1,0 +1,111 @@
+main{
+    padding: 20px;
+}
+.checkboxTips{
+    color: gray;
+}
+
+.notificationBox{
+    display: none;
+    width: 450px;
+    height: 200px;
+    position: fixed;
+    right: 20px;
+    border: 1px solid black;
+    background-color: rgb(190, 234, 255);
+}
+.notificationField{
+    display: flex;
+    flex-direction: row;
+    /* width: 380px; */
+    /* height: 120px; */
+    margin-top: 10px;
+    margin-left: 10px;
+    /* background-color: white;  */
+}
+
+.textField{
+    width: 380px;
+    height: 120px;
+    border: 2px solid rgb(0, 2, 131);
+    padding: 5px;
+    background-color: white;
+}
+
+h1{
+    font-size: 20px;
+    margin: 0 0 ;
+}
+
+
+#closeButton{
+    margin-left: 5px;
+    margin-right: -45px;
+    font-size: 35px;
+    height: 30px;
+    color: red;
+    font-weight: 50;
+    background: none;
+    border: none;
+    outline: none;
+}
+
+.notificationBottom{
+    display: flex;
+    margin-top: 18px;
+    margin-left: 10px;
+    /* vertical-align: text-bottom; */
+    /* align-items: center; */
+}
+
+
+/* .interactivity input{
+    width: 16px;
+    height: 16px;
+} */
+
+/* .interactivity .article span{
+    color: rgb(121, 119, 119);
+} */
+
+.switches{
+    display: flex;
+    /* width: 200px; */
+    margin-left: 120px;
+}
+
+
+.switches button{
+    width: 9px;
+    height: 9px;
+    border: none;
+    background-color: white;
+    border-radius: 50%;
+    padding: 0 0;
+    margin: 0 5px;
+    margin-top: 4px; 
+    background-color: rgb(199, 198, 198);
+}
+
+#next, #prev{
+    height: 17px;
+    width: 17px;
+    margin-top: 0px; 
+    background-color: white;
+    border: rgb(199, 198, 198) solid 1px;
+    color: rgb(121, 119, 119);
+}
+
+#prev{
+    margin-right: 10px;
+    border-radius: 30%;
+}
+
+#next{
+    margin-left: 10px;
+    border-radius: 30%;
+}
+
+.clickbutton{
+    background-color: blue !important; 
+}
