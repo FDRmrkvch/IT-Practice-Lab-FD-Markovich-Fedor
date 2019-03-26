@@ -60,4 +60,12 @@ class Notifications {
             }
         }
     }
+    handler(that, i) {
+        for (let y = 1; y < that.switches.length - 1; y++) {
+            that.switches[y].classList.remove("clickbutton");
+
+        }
+        that.text.innerHTML = that.notificationsText[i - 1];
+        that.switches[i].classList.add("clickbutton");
+    }
 }
