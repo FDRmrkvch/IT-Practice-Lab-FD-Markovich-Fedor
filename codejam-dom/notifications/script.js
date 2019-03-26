@@ -17,4 +17,47 @@ class Notifications {
         this.addEvent();
     }
 
+    addEvent() {
+
+        let that = this;
+        this.closeButton.addEventListener("click", function () {
+            let block = document.querySelector(".blockNotifications");
+            block.style.display = "none";
+            if (that.input.checked) {
+                localStorage.setItem("noLoading", "true");
+            }
+        })
+
+        for (let i = 1; i < that.switches.length - 1; i++)(function (i) {
+            that.switches[i].addEventListener("click", function () {
+                that.index = i;
+                that.handler(that, i);
+            })
+        })(i);
+
+
+        this.switches[0].addEventListener("click", function () {
+            if (that.index == 1) that.index = 7;
+            that.handler(that, that.index - 1);
+            that.index = that.index - 1;
+        });
+
+        this.switches[7].addEventListener("click", function () {
+            if (that.index == 6) that.index = 0;
+            that.handler(that, that.index + 1);
+            that.index = that.index + 1;
+        })
+
+        document.onkeyup = function (e) {
+            if (e.keyCode == 37) {
+                that.switches[0].click();
+            }
+            if (e.keyCode == 39) {
+                that.switches[7].click();
+            }
+            if (e.keyCode == 27) {
+                that.closeButton.click();
+            }
+        }
+    }
 }
