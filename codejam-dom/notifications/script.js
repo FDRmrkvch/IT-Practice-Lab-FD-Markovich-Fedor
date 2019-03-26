@@ -5,7 +5,7 @@ window.onload = function () {
         setTimeout(function () {
             let block = document.querySelector(".notificationBox");
             block.style.display = "block";
-        }, 1000)
+        }, 5000)
     }
     else {
         let notifications = document.querySelector(".notificationBox");
