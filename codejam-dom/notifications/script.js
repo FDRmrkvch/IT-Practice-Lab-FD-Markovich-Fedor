@@ -13,7 +13,6 @@ window.onload = function () {
     }
 }
 
-
 class Notifications {
     constructor() {
         this.index = null;
@@ -26,7 +25,7 @@ class Notifications {
     }
     start() {
         this.closeButton = document.getElementById("closeButton");
-        let switchesBlock = document.querySelector(".switches");
+        let switchesBlock = document.querySelector(".switch");
         this.switches = switchesBlock.getElementsByTagName("button");
         this.text = document.querySelector(".focus");
         this.input = document.getElementById("input");
@@ -34,7 +33,6 @@ class Notifications {
     }
 
     addEvent() {
-
         let that = this;
         this.closeButton.addEventListener("click", function () {
             let block = document.querySelector(".notificationBox");
@@ -79,7 +77,6 @@ class Notifications {
     handler(that, i) {
         for (let y = 1; y < that.switches.length - 1; y++) {
             that.switches[y].classList.remove("clickbutton");
-
         }
         that.text.innerHTML = that.notificationsText[i - 1];
         that.switches[i].classList.add("clickbutton");
