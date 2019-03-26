@@ -1,3 +1,19 @@
+window.onload = function () {
+    if (!localStorage.noLoading) {
+        let notifications = new Notifications;
+        notifications.switches[1].click();
+        setTimeout(function () {
+            let block = document.querySelector(".blockNotifications");
+            block.style.display = "block";
+        }, 1000)
+    }
+    else {
+        let notifications = document.querySelector(".blockNotifications");
+        notifications.style.display = "none";
+    }
+}
+
+
 class Notifications {
     constructor() {
         this.index = null;
